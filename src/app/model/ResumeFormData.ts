@@ -1,0 +1,37 @@
+export interface ResumeFormData{
+    firstName:string;
+    middleName:string;
+    lastName:string;
+    description1:string;
+    email1:string;
+    mobile1:string;
+    dob1:string;
+    gender1:string;
+    fb1:string;
+    li1:string;
+    tw1:string;
+    obj1:string;
+    university11:string;
+    yearofpassing11:string;
+    percentage11:string;
+    university21:string;
+    yearofpassing21:string;
+    percentage21:string;
+    university31:string;
+    yearofpassing31:string;
+    percentage31:string;
+    university41:string;
+    yearofpassing41:string;
+    percentage41:string;
+    wor11:string;
+    wor21:string;
+    tech11:string;
+    tech21:string;
+    tech31:string;
+    tech41:string;
+    hob11:string;
+    hob21:string;
+    hob31:string;
+    declaration1:string;
+
+}

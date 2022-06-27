@@ -1,0 +1,14 @@
+textarea{
+    width: 75%;
+}
+.v2{
+    color:black;
+}
+/* .v1{
+    background-color: deeppink;
+} */
+.b1{
+    /* background-image: url("./assets/images/bg.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}

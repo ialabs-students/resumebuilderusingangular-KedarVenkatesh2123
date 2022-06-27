@@ -12,3 +12,6 @@ textarea{
     background-repeat: no-repeat;
     background-size: cover;
 }
+table label{
+    width:250px;
+}

@@ -1,0 +1,173 @@
+<div *ngIf="!showResume">
+    <div class="text-center">
+        <h2 style="color:crimson">Your Resume Builder</h2>
+    </div>
+    <div>
+        <marquee scrolldelay=10>
+                <h2 style="color:rgb(21, 180, 249)" class="text-center">Build you resume here!....</h2>
+        </marquee>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-success">
+            <div id="cid" class="carousel slide" data-ride="carousel">
+
+                <ul class="carousel-indicators">
+                    <li data-target="#cid" data-slide-to="0"></li>
+                    <li data-target="#cid" data-slide-to="1"></li>
+                    <li data-target="#cid" data-slide-to="2"></li>
+                </ul>
+    
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="rounded mx-auto d-block w-50" src="./assets/images/ntr.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="rounded mx-auto d-block w-50" src="./assets/images/coffeemug.jpg" >
+                    </div>
+                    <div class="carousel-item">
+                        <img class="rounded mx-auto d-block w-50" src="./assets/images/ntr.jpg">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+    <div class="text-center">
+            <h3 style="color:crimson">Build you resume here!</h3>
+        
+        <form action="" id ="regForm" (submit)="saveFormData()">
+            <diV class="bg-warning text-center"><h3>Profile picture:</h3></diV>
+            <div><input type="file" id="myfile" name="myfile"></div>
+            <div class="text-center bg-warning"><h4>Enter Basic Informations:</h4></div>
+            <div class="modal-body">
+            <table class="table table-warning table-hover t1">
+                <tr>
+                    <td> <label> Enter First Name: </label> </td>
+                    <td> <input type="text" name="fname" id="fname" [(ngModel)]="formData.firstName"></td>
+                    <td> <label> Enter Last Name: </label> </td>
+                    <td> <input type="text" name="lname" [(ngModel)]="formData.lastName"> </td>
+                </tr>
+                <tr>
+                    <td> <label> Enter Email Id: </label> </td>
+                    <td> <input type="email" name="email" [(ngModel)]="formData.email1"> </td>
+                    <td> <label> Enter Mobile Number: </label> </td>
+                    <td> <input type="number" name="mobile" [(ngModel)]="formData.mobile1"> </td>
+                </tr>
+                <tr>
+                    <td> <label> Enter Date of Birth: </label> </td>
+                    <td> <input style="width: 200px;" type="date" name="dob" [(ngModel)]="formData.dob1"> </td>
+                    <td> <label> Enter Gender: </label> </td>
+                    <td> <select style="width:200px" name="gender" [(ngModel)]="formData.gender1">
+                            <option value="">-select-</option>
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                            <option value="O">Other</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            </div>
+            <div class="text-center bg-warning"><h4>Social media</h4></div>
+            <div>
+                <label class="v2">Facebook</label>
+                <input class="pl-2" type="url" id="fb" name="fb" [(ngModel)]="formData.fb1">
+            </div>
+            <div>
+                <label class="v2">Linkedin</label>
+                <input class="pl-2"  type="url" id="li" name="li" [(ngModel)]="formData.li1">
+            </div>
+            <div>
+                <label class="v2">Twitter</label>
+                <input class="pl-2"  type="url" id="tw" name="tw" [(ngModel)]="formData.tw1">
+            </div>
+            <div class="text-center bg-warning"><h4>Objective</h4></div>
+            <textarea class="obj" name="obj"  placeholder="Enter your Objective" [(ngModel)]="formData.obj1"></textarea>
+            <div class="text-center bg-warning"><h4>Enter Educational Qualification:</h4></div>
+            <table class="table table-dark table-hover">
+                <tr>
+                    <th style="color:red ;"> Education </th>
+                    <th style="color:red ;"> School/University</th>
+                    <th style="color:red ;"> Year of Passing </th>
+                    <th style="color:red ;"> Percentage/CGPA </th>
+                </tr>
+                <tr>
+                    <td> <label> Post Graduation: </label> </td>
+                    <td> <input type="text" name="university1" placeholder="Enter School/University" [(ngModel)]="formData.university11"> </td>
+                    <td> <input style="color: white;" type="number" name="yearofpassing1" placeholder="Enter Year of Passing" [(ngModel)]="formData.yearofpassing11"> </td>
+                    <td> <input style="color: white;" type="number" name="percentage1" placeholder="Enter Percentage/CGPA" [(ngModel)]="formData.percentage11"> </td>
+                </tr>
+                <tr>
+                    <td> <label> Graduation: </label> </td>
+                    <td> <input type="text" name="university2" placeholder="Enter School/University" [(ngModel)]="formData.university21"> </td>
+                    <td> <input style="color: white;" type="number" name="yearofpassing2" placeholder="Enter Year of Passing" [(ngModel)]="formData.yearofpassing21"> </td>
+                    <td> <input style="color: white;" type="number" name="percentage2" placeholder="Enter Percentage/CGPA" [(ngModel)]="formData.percentage21"> </td>
+                </tr>
+                <tr>
+                    <td> <label> Intermidate: </label> </td>
+                    <td> <input type="text" name="university3" placeholder="Enter School/University" [(ngModel)]="formData.university31"> </td>
+                    <td> <input style="color: white;" type="number" name="yearofpassing3" placeholder="Enter Year of Passing" [(ngModel)]="formData.yearofpassing31"> </td>
+                    <td> <input style="color: white;" type="number" name="percentage3" placeholder="Enter Percentage/CGPA" [(ngModel)]="formData.percentage31"> </td>
+                </tr>
+                <tr>
+                    <td> <label> High School: </label> </td>
+                    <td> <input type="text" name="university4" placeholder="Enter School/University" [(ngModel)]="formData.university41"> </td>
+                    <td> <input style="color: white;" type="number" name="yearofpassing4" placeholder="Enter Year of Passing" [(ngModel)]="formData.yearofpassing41"> </td>
+                    <td> <input style="color: white;" type="number" name="percentage4" placeholder="Enter Percentage/CGPA" [(ngModel)]="formData.percentage41"> </td>
+                </tr>
+                
+            </table>
+
+            <div class="text-center bg-warning"><h4>Enter Experience:</h4></div>
+            <!-- <table class="table table-warning">
+                <thead>
+                    <tr>
+                        <th class="pl-2"> Organization </th>
+                        <th class="pl-2">Experience</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td class="pl-2"> <input type="text" name="organization1" placeholder="Enter Organization"> </td>
+                    <td class="pl-2"> <input type="number" name="exp1" placeholder="Experience in years"> </td>
+                </tr>
+                <tr>
+                    <td class="pl-2"> <input type="text" name="organization2" placeholder="Enter Organization"> </td>
+                    <td class="pl-2"> <input type="number" name="exp2" placeholder="Experience in years"> </td>
+                </tr>  -->
+            <textarea class="bg-dark text-white" name="wor1"  placeholder="Enter your work Experience" [(ngModel)]="formData.wor11"></textarea>
+            <textarea class="bg-dark text-white" name="wor2"  placeholder="Enter you work Experience" [(ngModel)]="formData.wor21"></textarea>
+            <div class="text-center bg-warning"><h4>Enter Skils:</h4></div>
+            <table class="table table-warning table-hover">
+                <thead>
+                    <tr>
+                        <th class="pl-2"> Technology </th>
+                    </tr>
+                </thead>
+                <tr class="md-2">
+                    <td class="pl-2"> <input type="text" name="tech1" placeholder="Enter Technology" [(ngModel)]="formData.tech11"> </td>
+                </tr>
+                <tr class="pb-2">
+                    <td class="pl-2"> <input type="text" name="tech2" placeholder="Enter Technology" [(ngModel)]="formData.tech21"> </td>
+                </tr>
+                <tr class="md-2">
+                    <td class="pl-2"> <input type="text" name="tech3" placeholder="Enter Technology" [(ngModel)]="formData.tech31"> </td>
+                </tr>
+                <tr class="md-2">
+                    <td class="pl-2"> <input type="text" name="tech4" placeholder="Enter Technology" [(ngModel)]="formData.tech41"> </td>
+                </tr>
+                
+            </table>
+            <div class="text-center bg-warning"><h4>Enter hobbies:</h4></div>
+            <textarea class="bg-dark text-white" style="width:25%" name="hob1" [(ngModel)]="formData.hob11"></textarea>
+            <textarea class="bg-dark text-white" style="width:25%" name="hob2" [(ngModel)]="formData.hob21"></textarea>
+            <textarea class="bg-dark text-white" style="width:25%" name="hob3" [(ngModel)]="formData.hob31"></textarea>
+            <div class="text-center bg-warning"><h4>Describe Yourself:</h4></div>
+            <textarea class="bg-dark text-white" name="description"  placeholder="Enter you wishdom" [(ngModel)]="formData.description1"></textarea>
+            <div class="text-center bg-warning"><h4>Declaration:</h4></div>
+            <textarea class="bg-dark text-white" name="declaration"  placeholder="Enter you wishdom" [(ngModel)]="formData.declaration1"></textarea>
+            <div><button class="btn btn-warning btn-sm" type="reset" >Reset</button>
+                <button class="btn btn-success btn-sm" type="submit" >Submit</button></div>
+                
+        </form>   
+    </div>
+</div>
+<app-resume *ngIf="showResume" [formData]="formData" ></app-resume>

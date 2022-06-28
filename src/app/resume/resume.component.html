@@ -1,0 +1,149 @@
+<div class="container mt-3">
+    <div class="row">
+        
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header bg-dark">
+                    <img class="img-thumbnail rounded-circle nb-2" src="./assets/images/venky.png" alt="" class="img-fluid" id="img1"/>
+                </div>
+                <div class="card-body">
+                    <h3>{{formData.firstName}} {{formData.lastName}}</h3>
+                </div>
+                <div class="card-footer">
+                    <h4 class="bg-dark text-center">About me</h4>
+                    <hr class="bg-dark">
+                    <p>{{formData.description1}}</p>
+                </div>
+            </div>
+            <div class="card">
+                
+                <div class="card-body">
+                    <h4 class="bg-dark text-center">Skils</h4>
+                    <hr class="bg-dark">
+                    <div class="pt-2"><span class="skil-item">{{formData.tech11}}</span></div>
+                    <div class="pt-2"><span class="skil-item">{{formData.tech21}}</span></div>
+                    <div class="pt-2"><span class="skil-item">{{formData.tech31}}</span></div>
+                    <div class="pt-2"><span class="skil-item">{{formData.tech41}}</span></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="bg-dark text-center">Fallow me</h4>
+                    <hr class="bg-dark">
+                    <h5>Facebook</h5><span class="text-dark-10">{{formData.fb1}}</span>
+                    <h5>Linkedin</h5><span class="text-dark-10">{{formData.li1}}</span>
+                    <h5>Twitter</h5><span class="text-dark-10">{{formData.tw1}}</span>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 pt-4" >
+            <div class="row">
+                
+                
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p><i class="fa fa-phone"><span>{{formData.mobile1}}</span></i></p>
+                    <p><i class="fa fa-envelope"><span>{{formData.email1}}</span></i></p>
+                </div>
+            </div>
+            <hr class="bg-dark">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4 class="bg-dark text-center">Objective</h4>
+                    <hr class="bg-dark">
+                    <p><span>{{formData.obj1}}</span></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div><h4 class="bg-dark text-center">Educational Qualification</h4></div>
+                <hr class="bg-dark">
+                <table>
+                    <tr>
+                        <th> Education </th>
+                        <th> School/University</th>
+                        <th> Year of Passing </th>
+                        <th> Percentage/CGPA </th>
+                    </tr>
+                    <tr>
+                        <td> <label> Post Graduation </label> </td>
+                        <td> <span>{{formData.university11}}</span> </td>
+                        <td> <span>{{formData.yearofpassing11}}</span> </td>
+                        <td> <span>{{formData.percentage11}}</span> </td>
+                    </tr>
+                    <tr>
+                        <td> <label> Graduation </label> </td>
+                        <td> <span>{{formData.university21}}</span> </td>
+                        <td> <span>{{formData.yearofpassing21}}</span> </td>
+                        <td> <span>{{formData.percentage21}}</span> </td>
+                    </tr>
+                    <tr>
+                        <td> <label> Intermidate </label> </td>
+                        <td> <span>{{formData.university31}}</span> </td>
+                        <td> <span>{{formData.yearofpassing31}}</span> </td>
+                        <td> <span>{{formData.percentage31}}</span> </td>
+                    </tr>
+                    <tr>
+                        <td> <label> High School </label> </td>
+                        <td> <span>{{formData.university41}}</span> </td>
+                        <td> <span>{{formData.yearofpassing41}}</span> </td>
+                        <td> <span>{{formData.percentage41}}</span> </td>
+                    </tr>
+                    
+                </table>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                <div><h4 class="bg-dark text-center">Experience</h4></div>
+                <hr class="bg-dark">
+                <!-- <table class="table table-warning">
+                    <thead>
+                        <tr>
+                            <th class="pl-2"> Organization </th>
+                            <th class="pl-2">Experience</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td class="pl-2"> <span id="organization1" name="organization1"></span> </td>
+                        <td class="pl-2"> <span id="exp1" name="exp1"></span> </td>
+                    </tr>
+                    <tr>
+                        <td class="pl-2"> <span id="organization2" name="organization2"></span> </td>
+                        <td class="pl-2"> <span id="exp2" name="exp2"></span> </td>
+                    </tr>
+                    
+                </table> -->
+                <ul>
+                    <li>{{formData.wor11}}</li>
+                    <li>{{formData.wor21}}</li>
+                </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div><h4 class="bg-dark text-center">Hobbies</h4></div>
+                    <hr class="bg-dark">
+                    <ul>
+                        <li>{{formData.hob11}}</li>
+                        <li>{{formData.hob21}}</li>
+                        <li>{{formData.hob31}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div><h4 class="bg-dark text-center">Declaration</h4></div>
+                    <hr class="bg-dark">
+                    <div class="text-dark-20">{{formData.declaration1}}</div>
+                </div>
+            </div>
+            <div>
+                <!-- <button class="btn btn-success btn-sm" (click)="editinfo($event)">edit info</button> -->
+            </div>
+        </div>
+    </div>
+    </div>
